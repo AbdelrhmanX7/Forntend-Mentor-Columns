@@ -1,0 +1,123 @@
+* {
+    margin: 0px;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+.column-packs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1000px;
+    height: 550px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.packs {
+    height: 100%;
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 24px 24px 24px 60px;
+    box-sizing: border-box;
+    color: white;
+}
+.packs:nth-of-type(1) {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.packs:nth-of-type(2) {
+    background-color: hsl(184, 100%, 22%);
+}
+.packs:nth-of-type(3) {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.pack-header {
+    font-size: 56px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.pack-desc {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-weight: 400;
+    width: 84%;
+    line-height: 1.8;
+}
+.pack-button {
+    padding: 16px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 40px;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(31, 77%, 52%);
+    width: 121px;
+    text-align: center;
+    border: 2px solid white;
+}
+.pack-button:hover {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0);
+    color: white !important;
+}
+.packs:nth-of-type(2) .pack-button {
+    color: hsl(184, 100%, 22%);
+}
+.packs:nth-of-type(3) .pack-button {
+    color: hsl(179, 100%, 13%);
+}
+@media screen and (max-width: 1050px) {
+    .column-packs {
+        width: 95%;
+    }
+    .pack-desc {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .column-packs {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        position: static;
+        top: 0; left: 0;
+        transform: none;
+        padding: 46px 0px;
+    }
+    .packs {
+        height: 500px;
+        width: 80%;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .packs:nth-of-type(1) {
+        background-color: hsl(31, 77%, 52%);
+        border-radius: 0px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    .packs:nth-of-type(3) {
+        border-radius: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    .pack-desc {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .packs {
+        width: 90%;
+        padding: 24px;
+    }
+    .pack-desc {
+        width: 100%;
+    }
+}
